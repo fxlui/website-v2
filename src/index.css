@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-black text-black dark:text-white;
+  min-height: 100vh;
+}
+
+.section {
+  @apply w-8/12 flex flex-col py-8 my-4;
+}
+
+.section-grey {
+  @apply w-full flex flex-col py-8 my-4 items-center bg-elevateLight dark:bg-elevateDark;
+}
