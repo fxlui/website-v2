@@ -13,11 +13,7 @@ body {
 }
 
 a {
-  @apply underline hover:text-secondary underline-offset-2 decoration-black/50 dark:decoration-white/50 hover:decoration-secondary/80;
-}
-
-.header.section {
-  padding-bottom: 1.25rem;
+  @apply underline hover:text-secondary underline-offset-2 decoration-black/50 dark:decoration-white/50 hover:decoration-secondary/80 transition-colors;
 }
 
 .section {

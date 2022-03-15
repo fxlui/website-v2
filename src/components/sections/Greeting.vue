@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import iconLogo from "../icons/iconLogo.vue";
+import iconGithub from "../icons/iconGithub.vue";
+import iconLinkedIn from "../icons/iconLinkedIn.vue";
+import iconMail from "../icons/iconMail.vue";
 import { Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
 import "swiper/css/effect-fade";
 </script>
 
 <template>
-  <header class="section header">
+  <header class="section header !pb-4">
     <iconLogo />
     <h1 class="pt-10 text-3xl font-semibold">
       Hi, I'm <span class="text-primary">Eric</span>!
@@ -17,13 +19,14 @@ import "swiper/css/effect-fade";
     </h1>
     <Swiper
       class="py-1 w-full"
-      :modules="[Autoplay, EffectFade]"
+      :allowTouchMove="false"
       :spaceBetween="30"
       :effect="'fade'"
       :autoHeight="true"
       :loop="true"
+      :modules="[Autoplay, EffectFade]"
       :autoplay="{
-        delay: 3000,
+        delay: 2500,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }"
@@ -60,6 +63,29 @@ import "swiper/css/effect-fade";
         </h1>
       </swiper-slide>
     </Swiper>
+    <div class="pt-8 links flex space-x-4 transition">
+      <a
+        href="https://github.com/fxlui"
+        target="_blank"
+        rel="noopener noreferrer"
+        alt="my github profile"
+        ><iconGithub class="fill-current h-6"
+      /></a>
+      <a
+        href="https://www.linkedin.com/in/eric-liu-439b0121a/"
+        target="_blank"
+        rel="noopener noreferrer"
+        alt="my linkedin profile"
+        ><iconLinkedIn class="fill-current h-6"
+      /></a>
+      <a
+        href="mailto:me@fxlui.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        alt="contact me via email"
+        ><iconMail class="fill-current h-6"
+      /></a>
+    </div>
   </header>
 </template>
 
