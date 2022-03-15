@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply bg-white dark:bg-black text-black dark:text-white;
+  @apply bg-white dark:bg-black text-black dark:text-white transition-colors;
   min-height: 100vh;
 }
 
@@ -13,7 +13,11 @@ body {
 }
 
 a {
-  @apply underline hover:text-secondary transition-colors underline-offset-2 decoration-black/50 dark:decoration-white/50 hover:decoration-secondary/80;
+  @apply underline hover:text-secondary underline-offset-2 decoration-black/50 dark:decoration-white/50 hover:decoration-secondary/80;
+}
+
+.header.section {
+  padding-bottom: 1.25rem;
 }
 
 .section {
@@ -36,24 +40,16 @@ a {
   padding-left: calc(((6 / 4) / 12) * 100vw);
 }
 
-.header .swiper {
-  @apply pt-1;
-  width: 100%;
-  height: auto;
-}
-
-.header .swiper .swiper-slide {
-  height: auto !important;
-}
-
 @media only screen and (min-width: 768px) {
   .slider {
     padding-left: calc(((8 / 4) / 12) * 100vw);
   }
 }
 
-@media only screen and (min-width: 350px) and (max-width: 445px) {
-  .header .swiper .swiper-slide {
-    height: 5rem !important;
-  }
+.header .swiper-slide {
+  opacity: 0 !important;
+}
+
+.header .swiper-slide-active {
+  opacity: 1 !important;
 }

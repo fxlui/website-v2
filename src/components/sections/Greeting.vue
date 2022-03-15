@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import iconLogo from "../icons/iconLogo.vue";
-import { Autoplay } from "swiper";
+import { Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
-import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
 </script>
 
 <template>
@@ -16,16 +16,19 @@ import "swiper/css/autoplay";
       I'm a Master of IT student at UNSW.
     </h1>
     <Swiper
+      class="py-1 w-full"
+      :modules="[Autoplay, EffectFade]"
+      :spaceBetween="30"
+      :effect="'fade'"
       :autoHeight="true"
-      :space-between="20"
-      :slidesPerView="1"
-      :direction="'vertical'"
       :loop="true"
-      :modules="[Autoplay]"
       :autoplay="{
-        delay: 2250,
+        delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
+      }"
+      :fadeEffect="{
+        crossFade: true,
       }"
     >
       <swiper-slide>
@@ -33,12 +36,26 @@ import "swiper/css/autoplay";
       </swiper-slide>
       <swiper-slide>
         <h1 class="text-3xl font-semibold">
-          I'm 1/3 of
+          I'm ⅓ of
           <a
             href="https://logicpop.com.au"
             target="_blank"
             rel="noopener noreferrer"
             >logicpop</a
+          >.
+        </h1>
+      </swiper-slide>
+      <swiper-slide>
+        <h1 class="text-3xl font-semibold">I listen to a lot of electropop.</h1>
+      </swiper-slide>
+      <swiper-slide>
+        <h1 class="text-3xl font-semibold">
+          I'm currently working on
+          <a
+            href="https://github.com/csesoc/Freerooms"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Freerooms</a
           >.
         </h1>
       </swiper-slide>
