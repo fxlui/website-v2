@@ -4,7 +4,7 @@ import Projects from "./components/sections/Projects.vue";
 </script>
 
 <template>
-  <div class="w-screen flex flex-col items-center">
+  <div class="flex flex-col items-center">
     <Greeting />
     <Projects />
   </div>

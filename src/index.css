@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 html,
 body {
   @apply bg-white dark:bg-black text-black dark:text-white transition-colors;
@@ -22,30 +21,4 @@ a {
 
 .section-grey {
   @apply w-full flex flex-col py-8 my-4 items-center bg-elevateLight dark:bg-elevateDark;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.slider {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  padding-left: calc(((6 / 4) / 12) * 100vw);
-}
-
-@media only screen and (min-width: 768px) {
-  .slider {
-    padding-left: calc(((8 / 4) / 12) * 100vw);
-  }
-}
-
-.header .swiper-slide {
-  opacity: 0 !important;
-}
-
-.header .swiper-slide-active {
-  opacity: 1 !important;
 }

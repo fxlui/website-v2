@@ -10,9 +10,16 @@ import "swiper/css/effect-fade";
 
 <template>
   <header class="section header !pb-4">
-    <iconLogo />
+    <iconLogo class="hover:fill-primary transition-colors" />
     <h1 class="pt-10 text-3xl font-semibold">
-      Hi, I'm <span class="text-primary">Eric</span>!
+      Hi, I'm
+      <div
+        class="group inline hover:bg-primary/80 hover:px-2 rounded-md transition-all"
+      >
+        <span class="text-primary group-hover:text-current">Eric</span>
+        <span class="hidden name group-hover:inline"> Liu</span>
+      </div>
+      <!-- prettier-ignore -->!
     </h1>
     <h1 class="pt-1 text-3xl font-semibold">
       I'm a Master of IT student at UNSW.
@@ -89,4 +96,12 @@ import "swiper/css/effect-fade";
   </header>
 </template>
 
-<style scoped></style>
+<style scoped>
+.swiper-slide {
+  opacity: 0 !important;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+</style>
