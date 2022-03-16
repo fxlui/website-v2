@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/pagination";
 
 import Modal from "../Modal.vue";
 import ProjectCard from "../ProjectCard.vue";
@@ -13,13 +15,6 @@ import TaskhouseImage from "@/assets/images/taskhouse.png";
 import Taskhouse from "../projects/Taskhouse.vue";
 import FootstepsImage from "@/assets/images/footsteps.png";
 import Footsteps from "../projects/Footsteps.vue";
-
-const onSwiper = (swiper: any) => {
-  console.log(swiper);
-};
-const onSlideChange = () => {
-  console.log("slide change");
-};
 
 const showModal = ref(false);
 const activeProject = ref("");
@@ -48,19 +43,22 @@ const closeModal = () => {
       </template>
     </Modal>
   </Teleport>
-  <div class="projects section-grey">
+  <div class="projects section-grey !pb-0">
     <div class="section-width pb-6">
       <h3 class="text-xl font-medium">Projects</h3>
       <p class="text-lg font-normal">Some projects I've worked on</p>
     </div>
-    <div class="w-full">
+    <div class="w-full pb-5">
       <Swiper
         class="slider last:pr-36"
-        :watchSlidesProgress="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :modules="[Pagination]"
         :slides-per-view="1"
         :space-between="30"
         :breakpoints="{
-          320: {
+          450: {
             slidesPerView: 1,
             spaceBetween: 30,
           },
@@ -73,8 +71,6 @@ const closeModal = () => {
             spaceBetween: 30,
           },
         }"
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
       >
         <swiper-slide
           ><ProjectCard
@@ -100,7 +96,7 @@ const closeModal = () => {
   </div>
 </template>
 
-<style scoped>
+<style lang="postcss" scoped>
 /* Hide scrollbar for Chrome, Safari and Opera */
 .slider::-webkit-scrollbar {
   display: none;
@@ -111,6 +107,15 @@ const closeModal = () => {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   padding-left: calc(((6 / 4) / 12) * 100vw);
+}
+
+.swiper-slide {
+  @apply transition-all;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  @apply opacity-75 scale-95;
 }
 
 @media only screen and (min-width: 768px) {

@@ -48,3 +48,11 @@ a {
 .section-grey {
   @apply w-full flex flex-col py-8 my-4 items-center bg-elevateLight dark:bg-elevateDark;
 }
+
+.projects .swiper-wrapper {
+  @apply pb-10;
+}
+
+.projects .swiper-pagination-bullets {
+  bottom: 0px !important;
+}
