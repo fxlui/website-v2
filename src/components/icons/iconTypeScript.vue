@@ -1,11 +1,14 @@
 <template>
   <svg
+    role="img"
     fill="none"
     height="256"
     viewBox="0 0 256 256"
     width="256"
     xmlns="http://www.w3.org/2000/svg"
+    aria-labelledby="typescript"
   >
+    <title id="typescript">TypeScript</title>
     <rect class="base" height="256" rx="20" width="256" />
     <path
       clip-rule="evenodd"
