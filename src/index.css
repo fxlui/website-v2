@@ -1,10 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background {
+  @apply bg-white dark:bg-black text-black dark:text-white;
+}
+
+.background-elevated {
+  @apply bg-elevateLight dark:bg-elevateDark text-black dark:text-white;
+}
+
+*::-webkit-scrollbar {
+  @apply w-3;
+}
+
+*::-webkit-scrollbar-track {
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply transition-all bg-neutral-200 hover:bg-neutral-300 active:bg-neutral-400 dark:bg-neutral-700 dark:hover:bg-neutral-800 dark:active:bg-neutral-900 rounded-md shadow-md outline-[1.5px] outline-neutral-400/30 dark:outline-neutral-800/30 outline;
+}
+
 html,
 body {
-  @apply bg-white dark:bg-black text-black dark:text-white transition-colors;
+  @apply background transition-colors;
   min-height: 100vh;
+  overflow: overlay;
 }
 
 .section-width {

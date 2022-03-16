@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { ref } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import Medician from "../projects/Medician.vue";
+import ProjectCard from "../ProjectCard.vue";
+import Modal from "../Modal.vue";
+import Medician from "@/assets/images/medician.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,9 +15,19 @@ const onSwiper = (swiper: any) => {
 const onSlideChange = () => {
   console.log("slide change");
 };
+
+const showModal = ref(false);
 </script>
 
 <template>
+  <Teleport to="body">
+    <!-- use the modal component, pass in the prop -->
+    <Modal :show="showModal" @close="showModal = false">
+      <template #header>
+        <h3>custom header</h3>
+      </template>
+    </Modal>
+  </Teleport>
   <div class="projects section-grey">
     <div class="section-width pb-6">
       <h3 class="text-xl font-medium">Projects</h3>
@@ -43,8 +56,18 @@ const onSlideChange = () => {
         @swiper="onSwiper"
         @slideChange="onSlideChange"
       >
-        <swiper-slide><medician /></swiper-slide>
-        <swiper-slide><Medician /></swiper-slide>
+        <swiper-slide
+          ><ProjectCard
+            title="Medician"
+            :image="Medician"
+            @clicked="showModal = true"
+        /></swiper-slide>
+        <swiper-slide
+          ><ProjectCard
+            title="Medician"
+            :image="Medician"
+            @clicked="$emit('click')"
+        /></swiper-slide>
       </Swiper>
     </div>
   </div>

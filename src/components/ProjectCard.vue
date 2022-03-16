@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps({
-  title: String,
-  image: String,
+  title: { type: String, required: true },
+  image: { type: String, required: true },
 });
 </script>
 
@@ -9,6 +9,7 @@ const props = defineProps({
   <div
     class="rounded-xl relative w-full h-80 group bg-cover project"
     :style="{ 'background-image': 'url(' + image + ')' }"
+    @click="$emit('clicked')"
   >
     <div
       class="transition-all absolute bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-7 w-full rounded-b-xl backdrop-blur bg-white/80 dark:bg-black/70"
