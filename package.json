@@ -14,8 +14,7 @@
     "tiny-slider": "^2.9.4",
     "vue": "^3.2.31",
     "vue-final-modal": "^3.4.3",
-    "vue-router": "^4.0.12",
-    "vuetensils": "^0.10.4"
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

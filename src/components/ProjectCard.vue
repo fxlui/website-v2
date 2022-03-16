@@ -6,8 +6,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div
-    class="rounded-xl relative w-full h-80 group bg-cover project"
+  <button
+    class="rounded-xl relative w-full h-80 group bg-cover project hover:cursor-pointer text-left"
     :style="{ 'background-image': 'url(' + image + ')' }"
     @click="$emit('clicked')"
   >
@@ -18,7 +18,7 @@ const props = defineProps({
         {{ props.title }}
       </p>
     </div>
-  </div>
+  </button>
 </template>
 
 <style scoped></style>

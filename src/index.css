@@ -28,6 +28,11 @@ body {
   overflow: overlay;
 }
 
+html.modal-open {
+  height: 100%;
+  overflow: hidden !important;
+}
+
 .section-width {
   @apply w-9/12 md:w-8/12;
 }

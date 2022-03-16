@@ -66,12 +66,12 @@ import "swiper/css/effect-fade";
       </swiper-slide>
       <swiper-slide>
         <h1 class="text-3xl font-semibold">
-          I'm currently working on
+          I'm a part of the
           <a
-            href="https://github.com/csesoc/Freerooms"
+            href="https://github.com/csesoc"
             target="_blank"
             rel="noopener noreferrer"
-            >Freerooms</a
+            >CSESoc Projects Team</a
           >.
         </h1>
       </swiper-slide>

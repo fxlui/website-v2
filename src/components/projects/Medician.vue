@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { MasonryGrid } from "@egjs/vue-grid";
-import iconAndroidVue from "@/components/icons/iconAndroid.vue";
-import iconAppleVue from "@/components/icons/iconApple.vue";
-import iconAppStoreVue from "@/components/icons/iconAppStore.vue";
-import iconGithubVue from "@/components/icons/iconGithub.vue";
-import iconMobileVue from "@/components/icons/iconMobile.vue";
-import iconReactVue from "@/components/icons/iconReact.vue";
-import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
+import iconAndroidVue from "..//icons/iconAndroid.vue";
+import iconAppleVue from "..//icons/iconApple.vue";
+import iconAppStoreVue from "..//icons/iconAppStore.vue";
+import iconGithubVue from "..//icons/iconGithub.vue";
+import iconMobileVue from "..//icons/iconMobile.vue";
+import iconReactVue from "..//icons/iconReact.vue";
+import iconTypeScriptVue from "..//icons/iconTypeScript.vue";
 </script>
 
 <template>
   <div class="image">
     <slot name="image"
       ><img
-        class="object-cover max-h-96 w-full rounded-md"
+        class="object-cover max-h-[26rem] w-full rounded-md"
         src="@/assets/images/medician.png"
     /></slot>
   </div>
@@ -108,9 +108,6 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
         </div>
       </div>
     </masonry-grid>
-    <div class="modal-body">
-      <slot name="body"></slot>
-    </div>
   </div>
 </template>
 
@@ -128,7 +125,7 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
   @apply h-6 w-6 fill-current;
 }
 .item {
-  @apply w-full md:w-[calc(50%-6px)] h-auto p-3  rounded-md;
+  @apply w-full md:w-[calc(50%-6px)] h-auto p-3 rounded-md;
 }
 
 .desc-text {

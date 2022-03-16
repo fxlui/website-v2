@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { ref } from "vue";
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import ProjectCard from "../ProjectCard.vue";
-import Modal from "../Modal.vue";
-import Medician from "@/assets/images/medician.png";
-
-// Import Swiper styles
 import "swiper/css";
+
+import Modal from "../Modal.vue";
+import ProjectCard from "../ProjectCard.vue";
+import GitHubCard from "../GitHubCard.vue";
+
+import MedicianImage from "@/assets/images/medician.png";
+import Medician from "../projects/Medician.vue";
+import TaskhouseImage from "@/assets/images/taskhouse.png";
+import Taskhouse from "../projects/Taskhouse.vue";
+import FootstepsImage from "@/assets/images/footsteps.png";
+import Footsteps from "../projects/Footsteps.vue";
 
 const onSwiper = (swiper: any) => {
   console.log(swiper);
@@ -17,21 +22,36 @@ const onSlideChange = () => {
 };
 
 const showModal = ref(false);
+const activeProject = ref("");
+
+const setModal = (id: string) => {
+  activeProject.value = id;
+  showModal.value = true;
+  const html = document.querySelector("html");
+  html?.classList.add("modal-open");
+};
+
+const closeModal = () => {
+  showModal.value = false;
+  const html = document.querySelector("html");
+  html?.classList.remove("modal-open");
+};
 </script>
 
 <template>
   <Teleport to="body">
-    <!-- use the modal component, pass in the prop -->
-    <Modal :show="showModal" @close="showModal = false">
-      <template #header>
-        <h3>custom header</h3>
+    <Modal :show="showModal" @close="closeModal()">
+      <template v-slot:body>
+        <Medician v-if="activeProject === 'medician'" />
+        <Taskhouse v-if="activeProject === 'taskhouse'" />
+        <Footsteps v-if="activeProject === 'footsteps'" />
       </template>
     </Modal>
   </Teleport>
   <div class="projects section-grey">
     <div class="section-width pb-6">
       <h3 class="text-xl font-medium">Projects</h3>
-      <p class="pt-1 text-lg font-normal">Some projects lorem ipsum</p>
+      <p class="text-lg font-normal">Some projects I've worked on</p>
     </div>
     <div class="w-full">
       <Swiper
@@ -59,15 +79,22 @@ const showModal = ref(false);
         <swiper-slide
           ><ProjectCard
             title="Medician"
-            :image="Medician"
-            @clicked="showModal = true"
+            :image="MedicianImage"
+            @clicked="setModal('medician')"
         /></swiper-slide>
         <swiper-slide
           ><ProjectCard
-            title="Medician"
-            :image="Medician"
-            @clicked="$emit('click')"
+            title="TaskHouse"
+            :image="TaskhouseImage"
+            @clicked="setModal('taskhouse')"
         /></swiper-slide>
+        <swiper-slide
+          ><ProjectCard
+            title="Footsteps"
+            :image="FootstepsImage"
+            @clicked="setModal('footsteps')"
+        /></swiper-slide>
+        <swiper-slide><GitHubCard /></swiper-slide>
       </Swiper>
     </div>
   </div>
