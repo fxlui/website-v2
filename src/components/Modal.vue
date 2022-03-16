@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MasonryGrid } from "@egjs/vue-grid";
+import iconXMarkVue from "@/components/icons/iconXMark.vue";
 import Medician from "@/projects/Medician.vue";
 const props = defineProps({
   show: Boolean,
@@ -23,11 +23,13 @@ const props = defineProps({
           <div class="modal-footer flex justify-center py-2">
             <slot name="footer">
               <button
-                aria-label="close dialog"
-                class="p-2 background hover:background-elevated rounded-2xl"
+                aria-label="close project details"
+                class="group transition-all mt-4 p-3 background hover:bg-primary rounded-full hover:scale-125"
                 @click="$emit('close')"
               >
-                close
+                <iconXMarkVue
+                  class="transition-all group-hover:scale-110 h-4 w-4 fill-black dark:fill-white group-hover:fill-white"
+                />
               </button>
             </slot>
           </div>

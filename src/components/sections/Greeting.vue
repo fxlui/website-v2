@@ -14,10 +14,16 @@ import "swiper/css/effect-fade";
     <h1 class="pt-10 text-3xl font-semibold">
       Hi, I'm
       <div
-        class="group inline hover:bg-primary/80 hover:px-2 rounded-md transition-all"
+        class="group inline hover:bg-primary hover:px-2 rounded-md transition-all"
       >
-        <span class="text-primary group-hover:text-current">Eric</span>
-        <span class="hidden name group-hover:inline"> Liu</span>
+        <span class="transition-colors text-primary group-hover:text-white"
+          >Eric</span
+        >
+        <span
+          class="transition-colors hidden name group-hover:inline group-hover:text-white"
+        >
+          Liu</span
+        >
       </div>
       <!-- prettier-ignore -->!
     </h1>

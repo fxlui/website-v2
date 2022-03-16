@@ -23,14 +23,13 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
       :gap="10"
       :align="'center'"
       :defaultDirection="'end'"
-      :column="2"
     >
       <div class="item background title">
-        <h3 class="opacity-70">Project</h3>
+        <h3 class="card-title">Project</h3>
         <p class="desc-text">Medician</p>
       </div>
       <div class="item background desc">
-        <h3 class="opacity-70">Description</h3>
+        <h3 class="card-title">Description</h3>
         <p class="desc-text">
           Medician is a cross-platform mobile app for tracking PROs (Patient
           Reported Outcomes). Users are able to track their symptoms, get
@@ -38,19 +37,29 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
         </p>
       </div>
       <div class="item background date">
-        <h3 class="opacity-70">Date</h3>
+        <h3 class="card-title">Date</h3>
         <p class="desc-text">Oct 2021</p>
       </div>
       <div class="item background roles">
-        <h3 class="opacity-70">My Roles</h3>
+        <h3 class="card-title">My Roles</h3>
         <div class="flex flex-wrap space-x-2 mt-1">
-          <div class="role-pill background-elevated">Product</div>
-          <div class="role-pill background-elevated">Design</div>
-          <div class="role-pill background-elevated">Technical</div>
+          <div class="role-pill group background-elevated">
+            <span class="transition-colors group-hover:text-white"
+              >Product</span
+            >
+          </div>
+          <div class="role-pill group background-elevated">
+            <span class="transition-colors group-hover:text-white">Design</span>
+          </div>
+          <div class="role-pill group background-elevated">
+            <span class="transition-colors group-hover:text-white"
+              >Technical</span
+            >
+          </div>
         </div>
       </div>
       <div class="item background recognition">
-        <h3 class="opacity-70">Recognition</h3>
+        <h3 class="card-title">Recognition</h3>
         <p class="desc-text">
           UNSW
           <a
@@ -63,7 +72,7 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
         </p>
       </div>
       <div class="item background platforms">
-        <h3 class="opacity-70">Platforms</h3>
+        <h3 class="card-title">Platforms</h3>
         <div class="icons">
           <iconMobileVue class="icon" />
           <iconAppleVue class="icon" />
@@ -71,7 +80,7 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
         </div>
       </div>
       <div class="item background technology">
-        <h3 class="opacity-70">Technology</h3>
+        <h3 class="card-title">Technology</h3>
         <div class="icons">
           <iconReactVue class="icon" />
           <iconTypeScriptVue class="icon" />
@@ -79,7 +88,7 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
         </div>
       </div>
       <div class="item background links">
-        <h3 class="opacity-70">Links</h3>
+        <h3 class="card-title">Links</h3>
         <div class="icons">
           <a
             href="https://apps.apple.com/au/app/id1584595040"
@@ -106,6 +115,9 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
 </template>
 
 <style lang="postcss" scoped>
+.card-title {
+  @apply font-medium opacity-60 dark:font-normal dark:opacity-70;
+}
 .role-pill {
   @apply p-2 rounded-md text-sm w-auto font-semibold hover:bg-primary hover:px-3 transition-all;
 }
@@ -116,7 +128,7 @@ import iconTypeScriptVue from "@/components/icons/iconTypeScript.vue";
   @apply h-6 w-6 fill-current;
 }
 .item {
-  @apply w-[calc(50%-6px)] h-auto p-3  rounded-md;
+  @apply w-full md:w-[calc(50%-6px)] h-auto p-3  rounded-md;
 }
 
 .desc-text {
