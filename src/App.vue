@@ -13,7 +13,16 @@ import Contact from "./components/sections/Contact.vue";
     <Contact />
     <footer class="section !mt-2 pb-2">
       <div class="w-full flex justify-center">
-        <p class="opacity-50">&copy; 2022 Eric Liu</p>
+        <p class="opacity-50">
+          &copy; 2022 Eric Liu&nbsp;&nbsp;•&nbsp;
+          <a
+            href="https://old.fxlui.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="GitHub link for Footsteps"
+            >Previous Design</a
+          >
+        </p>
       </div>
     </footer>
   </div>
