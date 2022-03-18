@@ -15,7 +15,7 @@ const props = defineProps({
     >
       <div class="modal-wrapper relative">
         <div
-          class="overflow-auto max-h-[80vh] mx-10 md:mx-36 lg:mx-48 xl:mx-80 background-elevated p-5 rounded-xl"
+          class="shadow-xl overflow-auto max-h-[80vh] mx-10 md:mx-36 lg:mx-48 xl:mx-80 background-elevated p-5 rounded-xl"
         >
           <slot name="body"></slot>
         </div>
@@ -25,7 +25,7 @@ const props = defineProps({
           <slot name="footer">
             <button
               aria-label="close modal"
-              class="group transition-all mt-4 p-2 background hover:bg-primary rounded-full hover:scale-125 border-solid border-4 border-white dark:border-neutral-600 hover:border-primary"
+              class="shadow-md group transition-all mt-4 p-2 background hover:bg-primary rounded-full hover:scale-125 border-solid border-4 border-white dark:border-neutral-600 hover:border-primary"
               @click="$emit('close')"
             >
               <iconXMarkVue

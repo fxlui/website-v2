@@ -9,7 +9,7 @@ import "swiper/css/effect-fade";
 </script>
 
 <template>
-  <header class="section header !pb-4">
+  <header class="section header !pb-4 pt-8">
     <iconLogo class="hover:fill-primary transition-colors" />
     <h1 class="pt-10 text-3xl font-semibold">
       Hi, I'm

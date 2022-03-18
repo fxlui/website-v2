@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
+
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper";
 import "swiper/css";
@@ -19,15 +21,33 @@ import Footsteps from "../projects/Footsteps.vue";
 const showModal = ref(false);
 const activeProject = ref("");
 
+const router = useRouter();
+const route = useRoute();
+watch(
+  () => route.params.name,
+  async (newName) => {
+    if (!newName) {
+      activeProject.value = "";
+      showModal.value = false;
+      return;
+    }
+    newName = newName.toString();
+    if (["medician", "taskhouse", "footsteps"].includes(newName)) {
+      activeProject.value = newName;
+      showModal.value = true;
+    }
+    console.log(activeProject.value);
+  }
+);
+
 const setModal = (id: string) => {
-  activeProject.value = id;
-  showModal.value = true;
+  router.push("/projects/" + id);
   const html = document.querySelector("html");
   html?.classList.add("modal-open");
 };
 
 const closeModal = () => {
-  showModal.value = false;
+  router.push("/");
   const html = document.querySelector("html");
   html?.classList.remove("modal-open");
 };
@@ -43,10 +63,12 @@ const closeModal = () => {
       </template>
     </Modal>
   </Teleport>
-  <div class="projects section-grey !pb-0">
+  <div class="projects section-grey !pb-0" id="projects">
     <div class="section-width pb-6">
-      <h3 class="text-xl font-medium">Projects</h3>
-      <p class="text-lg font-normal">Some projects I've worked on</p>
+      <h3 class="text-xl font-medium">
+        <a class="!no-underline" href="#projects">Projects</a>
+      </h3>
+      <p class="text-lg font-normal opacity-90">Some projects I've worked on</p>
     </div>
     <div class="w-full pb-5">
       <Swiper
@@ -115,7 +137,7 @@ const closeModal = () => {
 
 .swiper-slide-next,
 .swiper-slide-prev {
-  @apply opacity-75 scale-95;
+  @apply opacity-75;
 }
 
 @media only screen and (min-width: 768px) {

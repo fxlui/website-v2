@@ -91,7 +91,7 @@ import iconDesktopVue from "../icons/iconDesktop.vue";
   @apply h-6 w-6 fill-current;
 }
 .item {
-  @apply w-full md:w-[calc(50%-6px)] h-auto p-3 rounded-md;
+  @apply w-full md:w-[calc(50%-6px)] h-auto p-3 rounded-md shadow-md shadow-neutral-200 dark:shadow-none;
 }
 
 .desc-text {

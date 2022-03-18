@@ -42,7 +42,7 @@ a {
 }
 
 .section {
-  @apply section-width flex flex-col py-8 my-4;
+  @apply section-width flex flex-col my-4;
 }
 
 .section-grey {
