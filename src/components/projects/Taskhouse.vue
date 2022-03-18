@@ -6,14 +6,14 @@ import iconDesktopVue from "../icons/iconDesktop.vue";
 </script>
 
 <template>
-  <div class="image">
-    <slot name="image"
+  <div class="project image">
+    <slot name="project image"
       ><img
         class="object-cover max-h-[26rem] w-full rounded-md"
         src="@/assets/images/taskhouse.png"
     /></slot>
   </div>
-  <div class="text mt-3 w-full">
+  <div class="project text mt-3 w-full">
     <masonry-grid
       class="container"
       :gap="10"
@@ -77,24 +77,4 @@ import iconDesktopVue from "../icons/iconDesktop.vue";
   </div>
 </template>
 
-<style lang="postcss" scoped>
-.card-title {
-  @apply font-medium opacity-60 dark:font-normal dark:opacity-70;
-}
-.role-pill {
-  @apply p-2 rounded-md text-sm w-auto font-semibold hover:bg-primary hover:px-3 transition-all;
-}
-.icons {
-  @apply flex space-x-2 pl-1 py-2 items-center;
-}
-.icon {
-  @apply h-6 w-6 fill-current;
-}
-.item {
-  @apply w-full md:w-[calc(50%-6px)] h-auto p-3 rounded-md shadow-md shadow-neutral-200 dark:shadow-none;
-}
-
-.desc-text {
-  @apply text-base md:text-lg lg:text-xl font-semibold;
-}
-</style>
+<style lang="postcss" scoped></style>

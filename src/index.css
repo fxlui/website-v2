@@ -56,3 +56,27 @@ a {
 .projects .swiper-pagination-bullets {
   bottom: 0px !important;
 }
+
+.project .card-title {
+  @apply font-medium opacity-60 dark:font-normal dark:opacity-70;
+}
+
+.project .role-pill {
+  @apply p-2 rounded-md text-sm w-auto font-semibold hover:bg-primary hover:px-3 transition-all;
+}
+
+.project .icons {
+  @apply flex space-x-2 pl-1 py-2 items-center;
+}
+
+.project .icon {
+  @apply h-6 w-6 fill-current;
+}
+
+.project .item {
+  @apply w-full md:w-[calc(50%-6px)] h-auto p-3 rounded-md shadow-md shadow-neutral-200 dark:shadow-none dark:bg-neutral-800;
+}
+
+.project .desc-text {
+  @apply text-base md:text-lg lg:text-xl font-semibold;
+}

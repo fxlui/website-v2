@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Master of Information Technology",
+    "school": "University of New South Wales",
+    "date": "Feb 2022 - Present",
+    "results": "",
+    "courses": [
+      {
+        "code": "COMP9321",
+        "title": "Data Services Engineering",
+        "desc": "Core concepts and practical skills for engineering the data in Web-service-oriented data-driven applications, using Python and Pandas.",
+        "mark": "In Progress"
+      },
+      {
+        "code": "COMP9315",
+        "title": "Database Systems Implementation",
+        "desc": "Examination of implementations of relational, object-oriented and distributed database systems.",
+        "mark": "In Progress"
+      }
+    ]
+  },
+  {
+    "title": "Bachelor of Computer Science",
+    "school": "University of New South Wales",
+    "date": "Feb 2019 - Dec 2022",
+    "results": "Distinction WAM (77.783)",
+    "courses": [
+      {
+        "code": "COMP3900",
+        "title": "Computer Science Project",
+        "desc": "A capstone software project. Working in teams to define, implement and evaluate a real-world software system.",
+        "mark": "93 HD"
+      },
+      {
+        "code": "COMP6080",
+        "title": "Web Front-End Programming",
+        "desc": "Fundamentals and advanced techniques of front-end development, using JavaScript, CSS and React.",
+        "mark": "86 HD"
+      },
+      {
+        "code": "COMP2511",
+        "title": "Object-Oriented Design & Programming",
+        "desc": "Solving real world problems with object-oriented design and programming in Java.",
+        "mark": "86 HD"
+      },
+      {
+        "code": "COMP3311",
+        "title": "Database Systems",
+        "desc": "Data models, relational database implementation, design and interaction with PostgreSQL.",
+        "mark": "92 HD"
+      },
+      {
+        "code": "COMP6771",
+        "title": "Advanced C++ Programming",
+        "desc": "Fundamentals and advanced techniques of object-oriented programming in C++.",
+        "mark": "92 HD"
+      }
+    ]
+  }
+]
