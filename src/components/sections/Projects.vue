@@ -68,7 +68,9 @@ const closeModal = () => {
       <h3 class="text-xl font-medium">
         <a class="!no-underline" href="#projects">Projects</a>
       </h3>
-      <p class="text-lg font-normal opacity-90">Some projects I've worked on</p>
+      <p class="text-lg font-normal opacity-90">
+        Some projects that I'm proud of
+      </p>
     </div>
     <div class="w-full pb-5">
       <Swiper

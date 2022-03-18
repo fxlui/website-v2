@@ -2,6 +2,7 @@
 import Greeting from "./components/sections/Greeting.vue";
 import Projects from "./components/sections/Projects.vue";
 import Courses from "./components/sections/Courses.vue";
+import Contact from "./components/sections/Contact.vue";
 </script>
 
 <template>
@@ -9,6 +10,12 @@ import Courses from "./components/sections/Courses.vue";
     <Greeting />
     <Projects />
     <Courses />
+    <Contact />
+    <footer class="section !mt-2 pb-2">
+      <div class="w-full flex justify-center">
+        <p class="opacity-50">&copy; 2022 Eric Liu</p>
+      </div>
+    </footer>
   </div>
 </template>
 
