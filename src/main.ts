@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "./index.css";
 import { createRouter, createWebHistory } from "vue-router";
+import vfmPlugin from "vue-final-modal";
 
 const routes = [
   { path: "/", component: App },
@@ -15,5 +16,6 @@ const router = createRouter({
 
 const app = createApp(App);
 app.use(router);
+app.use(vfmPlugin);
 
 app.mount("#app");

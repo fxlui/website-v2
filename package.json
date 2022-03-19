@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "devhost": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@egjs/vue-grid": "^1.9.0",
+    "@rvxlab/tailwind-plugin-ios-full-height": "^1.1.0",
     "@vueuse/components": "^8.1.1",
     "@vueuse/core": "^8.1.1",
     "swiper": "^8.0.7",

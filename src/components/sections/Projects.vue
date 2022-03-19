@@ -130,7 +130,7 @@ const closeModal = () => {
 .slider {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  padding-left: calc(((6 / 4) / 12) * 100vw);
+  padding-left: calc(((4 / 4) / 12) * 100vw);
 }
 
 .swiper-slide {

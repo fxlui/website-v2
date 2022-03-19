@@ -34,7 +34,7 @@ html.modal-open {
 }
 
 .section-width {
-  @apply w-9/12 md:w-8/12;
+  @apply w-10/12 md:w-8/12;
 }
 
 a {
@@ -57,12 +57,16 @@ a {
   bottom: 0px !important;
 }
 
+.project.text {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-3;
+}
+
 .project .card-title {
   @apply font-medium opacity-60 dark:font-normal dark:opacity-70;
 }
 
 .project .role-pill {
-  @apply p-2 rounded-md text-sm w-auto font-semibold hover:bg-primary hover:px-3 transition-all;
+  @apply p-2 rounded-md text-sm w-auto font-semibold;
 }
 
 .project .icons {
@@ -74,7 +78,7 @@ a {
 }
 
 .project .item {
-  @apply w-full md:w-[calc(50%-6px)] h-auto p-3 rounded-md shadow-md shadow-neutral-200 dark:shadow-none dark:bg-neutral-800;
+  @apply h-auto p-3 rounded-md shadow-md shadow-neutral-200 dark:shadow-none dark:bg-neutral-800;
 }
 
 .project .desc-text {

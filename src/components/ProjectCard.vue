@@ -12,7 +12,7 @@ const props = defineProps({
     @click="$emit('clicked')"
   >
     <div
-      class="transition-all absolute bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-7 w-full rounded-b-xl backdrop-blur bg-white/80 dark:bg-black/70 group-hover:bg-white/95 group-hover:dark:bg-black/80"
+      class="transition-all absolute bottom-0 py-4 group-hover:py-6 px-6 group-hover:px-7 w-full rounded-b-xl backdrop-blur bg-white/95 dark:bg-black/70 group-hover:bg-white/95 group-hover:dark:bg-black/80"
     >
       <p class="text-lg font-semibold group-hover:text-xl transition-all">
         {{ props.title }}
