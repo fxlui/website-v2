@@ -41,7 +41,7 @@
         "code": "COMP2511",
         "title": "Object-Oriented Design & Programming",
         "desc": "Solving real world problems with object-oriented design and programming in Java.",
-        "mark": "86 HD"
+        "mark": "95 HD"
       },
       {
         "code": "COMP3311",
@@ -53,7 +53,7 @@
         "code": "COMP6771",
         "title": "Advanced C++ Programming",
         "desc": "Fundamentals and advanced techniques of object-oriented programming in C++.",
-        "mark": "92 HD"
+        "mark": "83 DN"
       }
     ]
   }
