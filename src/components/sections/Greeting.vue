@@ -1,11 +1,35 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import { vElementVisibility } from "@vueuse/components";
+
 import iconLogo from "../icons/iconLogo.vue";
 import iconGithub from "../icons/iconGithub.vue";
 import iconLinkedIn from "../icons/iconLinkedIn.vue";
 import iconMail from "../icons/iconMail.vue";
-import { Autoplay, EffectFade } from "swiper";
+import { Autoplay, EffectFade, Controller } from "swiper";
+import type { Swiper as SwiperType } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css/effect-fade";
+
+const isVisible = ref(false);
+const swiperRef = ref<SwiperType | null>(null);
+
+const setSwiperRef = (swiper: SwiperType) => {
+  swiperRef.value = swiper;
+};
+
+const checkVisibility = (swiper: SwiperType) => {
+  if (!isVisible.value) {
+    swiper.autoplay.stop();
+  } else {
+    swiper?.autoplay.start();
+  }
+};
+
+function onElementVisibility(state: boolean) {
+  isVisible.value = state;
+  checkVisibility(swiperRef.value!);
+}
 </script>
 
 <template>
@@ -31,15 +55,17 @@ import "swiper/css/effect-fade";
       I'm a Master of IT student at UNSW.
     </h1>
     <Swiper
+      v-element-visibility="onElementVisibility"
+      @afterInit="setSwiperRef"
       class="py-1 w-full"
       :allowTouchMove="false"
       :spaceBetween="30"
       :effect="'fade'"
       :autoHeight="true"
       :loop="true"
-      :modules="[Autoplay, EffectFade]"
+      :modules="[Autoplay, EffectFade, Controller]"
       :autoplay="{
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }"
