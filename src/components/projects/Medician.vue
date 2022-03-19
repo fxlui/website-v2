@@ -35,7 +35,7 @@ import iconTypeScriptVue from "..//icons/iconTypeScript.vue";
     </div>
     <div class="item background roles">
       <h3 class="card-title">My Roles</h3>
-      <div class="flex flex-wrap space-x-1 mt-1">
+      <div class="flex flex-wrap space-x-2 mt-1">
         <div class="role-pill group background-elevated">
           <span class="">Product</span>
         </div>
