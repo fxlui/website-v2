@@ -48,12 +48,6 @@
         "title": "Database Systems",
         "desc": "Data models, relational database implementation, design and interaction with PostgreSQL.",
         "mark": "92 HD"
-      },
-      {
-        "code": "COMP6771",
-        "title": "Advanced C++ Programming",
-        "desc": "Fundamentals and advanced techniques of object-oriented programming in C++.",
-        "mark": "83 DN"
       }
     ]
   }
