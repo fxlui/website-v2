@@ -9,12 +9,12 @@
         "code": "COMP9321",
         "title": "Data Services Engineering",
         "desc": "Core concepts and practical skills for engineering the data in Web-service-oriented data-driven applications, using Python and Pandas.",
-        "mark": "In Progress"
+        "mark": "88 HD"
       },
       {
         "code": "COMP9315",
         "title": "Database Systems Implementation",
-        "desc": "Examination of implementations of relational, object-oriented and distributed database systems.",
+        "desc": "Web application vulnerabilities and best practices for developing secure web applications.",
         "mark": "In Progress"
       }
     ]
@@ -23,7 +23,7 @@
     "title": "Bachelor of Computer Science",
     "school": "University of New South Wales",
     "date": "Feb 2019 - Dec 2022",
-    "results": "Distinction WAM (77.783)",
+    "results": "Distinction",
     "courses": [
       {
         "code": "COMP3900",
