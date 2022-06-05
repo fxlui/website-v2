@@ -12,8 +12,8 @@
         "mark": "88 HD"
       },
       {
-        "code": "COMP9315",
-        "title": "Database Systems Implementation",
+        "code": "COMP6443",
+        "title": "Web Application Security and Testing",
         "desc": "Web application vulnerabilities and best practices for developing secure web applications.",
         "mark": "In Progress"
       }
@@ -23,7 +23,7 @@
     "title": "Bachelor of Computer Science",
     "school": "University of New South Wales",
     "date": "Feb 2019 - Dec 2022",
-    "results": "Distinction",
+    "results": "Distinction WAM",
     "courses": [
       {
         "code": "COMP3900",
