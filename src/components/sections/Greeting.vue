@@ -51,9 +51,9 @@ function onElementVisibility(state: boolean) {
       </div>
       <!-- prettier-ignore -->!
     </h1>
-    <h1 class="pt-1 text-3xl font-semibold">
+    <!-- h1 class="pt-1 text-3xl font-semibold">
       I'm a Master of IT student at UNSW.
-    </h1>
+    </h1 -->
     <Swiper
       v-element-visibility="onElementVisibility"
       @afterInit="setSwiperRef"
