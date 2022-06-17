@@ -74,6 +74,9 @@ function onElementVisibility(state: boolean) {
       }"
     >
       <swiper-slide>
+        <h1 class="text-3xl font-semibold">I'm a Master of IT student at UNSW.</h1>
+      </swiper-slide>
+      <swiper-slide>
         <h1 class="text-3xl font-semibold">I make stuff for the web.</h1>
       </swiper-slide>
       <swiper-slide>
