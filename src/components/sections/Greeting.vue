@@ -65,7 +65,7 @@ function onElementVisibility(state: boolean) {
       :loop="true"
       :modules="[Autoplay, EffectFade, Controller]"
       :autoplay="{
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }"
