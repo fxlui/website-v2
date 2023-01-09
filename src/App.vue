@@ -9,7 +9,6 @@ import Contact from "./components/sections/Contact.vue";
   <div class="flex flex-col items-center">
     <Greeting />
     <Projects />
-    <Courses />
     <Contact />
     <footer class="section !mt-2 pb-2">
       <div class="w-full flex justify-center">
